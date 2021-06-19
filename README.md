@@ -361,7 +361,7 @@ Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h
 
    ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg) 
 ## F. RESULT AND CONCLUSION
-The AI recognizes emotion model can get around 70% accuracy. There is still room for improving accuracy and efficiency.
+The AI recognizes emotion model can get around 70% accuracy. There is still room for improving accuracy and efficiency. We hope that we are able to train the model from scratch by collecting more comprehensive dataset in future. 
 
 Sometimes we hide our emotions. What others see on our outside is not always how we are feeling on the inside. This AI still not able to recognise our emotions if we were hiding them. This AI just able to detect basic emotion so, we need to gather more data set to spot the human's microexpression.
 
