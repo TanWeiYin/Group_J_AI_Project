@@ -3,7 +3,7 @@
 
 ![Group Member](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/Group_J.jpg)
 
-Objectives:
+**Objectives**
 
 - To classify each face based on the emotion shown in the facial expression into one of six categories (Angry, Fear, Happy, Neutral, Sad, Surprise).
 
