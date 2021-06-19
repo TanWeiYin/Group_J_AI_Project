@@ -50,6 +50,7 @@ This repository is organized as:
     │   ├── Main.ipynb                                # Entry point of webcam live demo
     │   ├── Model.h5                                  # Load Keras Model
     │   └── PlotConfussionMatrix.ipynb                # Confusion matrix visualization
+    ├── .gitignore
     └── README.md
     2 categories, 14 files 
 ```
