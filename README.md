@@ -379,3 +379,4 @@ Present by @TanWeiYin
 * [Emotion Detection CNN](https://github.com/akmadan/Emotion_Detection_CNN)
 * [README Template](https://github.com/osgoh88/Artificial-Intelligence-Project/)
 * [The 4 Convolutional Neural Network Models That Can Classify Your Fashion Images](https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-can-classify-your-fashion-images-9fe7f3e5399d#:~:text=Convolutional%20Neural%20Networks%20(CNNs)%20is,an%20image%20is%20good%20enough)
+* [Face Expression Detection](https://colab.research.google.com/drive/1DOvXJZRkjfKfF9oUpCZXSU3hPG3g1h-l?usp=sharing)
