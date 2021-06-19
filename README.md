@@ -72,11 +72,11 @@ This repository is organized as:
    
    The practical benefit of using CNN with 4 convolutional layer is that having fewer parameters greatly improves the time it takes to learn as well as reduces the amount of data required to train the model. The beauty of the CNN is that the number of parameters is independent of the size of the original image. We can run the same CNN on a 300 × 300 image, and the number of parameters won’t change in the convolution layer. The sliding-window shenanigans happen in the convolution layer of the neural network. A typical CNN has multiple convolution layers.
    
-5. Set Training Callbacks list by defining Save Checkpoint, Early Stopping and Reduce Learning Rate
+4. Set Training Callbacks list by defining Save Checkpoint, Early Stopping and Reduce Learning Rate
    
   Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
 
-7. Compile Model and Train Model
+5. Compile Model and Train Model
 ```bash
     Epoch 1/70
 564/564 [==============================] - 79s 139ms/step - loss: 2.5027 - acc: 0.2365 - val_loss: 1.7213 - val_acc: 0.3208
@@ -359,14 +359,14 @@ Epoch 70/70
 
 Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h5
 ```
-7. Plotting Accuracy and Loss
+6. Plotting Accuracy and Loss
    ![Training_Loss_Accuracy](https://github.com/Josie528/BITI1113-A.I.-Project/blob/main/misc/training_loss_accuracy.png)
    The gap between the two plotted line is small so, it has little overfitting. 
-8. Define function and Test the Trained Model
+7. Define function and Test the Trained Model
 
     We use k-fold cross-validation to estimate the skill of a method of unseen data like using a train-test split. It systematically creates and evaluates different subsets of the dataset. Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. Both train-test splits and k-fold cross validation are resampling methods. Since we are dealing to model the unknown, we need to use resampling method. In the case of applied machine learning, we are interested in estimating the skill of a machine learning procedure on unseen data. More specifically, the skill of the predictions made by a machine learning procedure.
     ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
-9. Plotting Confusion Matrix
+8. Plotting Confusion Matrix
 
    ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg) 
 ## F. RESULT AND CONCLUSION
