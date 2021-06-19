@@ -3,12 +3,7 @@
 
 Project Title: Human Emotion Recognition Using Keras :smile:
 
-Team Members:
-
-- Tan Wei Yin (B032020029)
-- Mirza Sahid Afridi (B031920505)
-- Nur Afiqah Bt Raman (B031910100)
-- Pang Jia Mei (B031910436)
+[Group Member](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/GroupMember.jpg)
 
 Objectives:
 
