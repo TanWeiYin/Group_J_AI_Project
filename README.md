@@ -367,9 +367,11 @@ Sometimes we hide our emotions. What others see on our outside is not always how
 
 Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to learn how to implement a real-world AI project using Python.
 
-## G. PROJECT PRESENTATION
+## G. DEMO VIDEO
+Present by @Tan Wei Yin
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
 
 ## H. ACKNOWLEDGEMENT
 * [Emotion Detection CNN](https://github.com/akmadan/Emotion_Detection_CNN)
 * [README Template](https://github.com/osgoh88/Artificial-Intelligence-Project/)
+* [The 4 Convolutional Neural Network Models That Can Classify Your Fashion Images](https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-can-classify-your-fashion-images-9fe7f3e5399d#:~:text=Convolutional%20Neural%20Networks%20(CNNs)%20is,an%20image%20is%20good%20enough)
