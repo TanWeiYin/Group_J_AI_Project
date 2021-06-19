@@ -368,7 +368,7 @@ Sometimes we hide our emotions. What others see on our outside is not always how
 Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to learn how to implement a real-world AI project using Python.
 
 ## G. DEMO VIDEO
-Present by @Tan Wei Yin
+Present by @TanWeiYin
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
 
 ## H. ACKNOWLEDGEMENT
