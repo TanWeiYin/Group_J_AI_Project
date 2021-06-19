@@ -37,7 +37,7 @@ This repository is organized as:
 ```bash
     ├── misc (8 entries)                              # Miscellaneous information
     │   ├── GroupJ_Slides.pdf
-    │   ├── GroupMember.jpg
+    │   ├── Group_J.jpg
     │   ├── TestResult.jpg
     │   ├── confusionmatrix.jpg
     │   ├── dataset.jpg
