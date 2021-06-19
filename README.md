@@ -52,7 +52,7 @@ This repository is organized as:
     │   └── PlotConfussionMatrix.ipynb                # Confusion matrix visualization
     ├── .gitignore
     └── README.md
-    2 categories, 14 files 
+    2 categories, 15 files 
 ```
 
 ## E. TRAINING THE HUMAN EMOTION RECOGNITION
