@@ -360,6 +360,19 @@ Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h
 7. Define function and Test the Trained Model
 
     We use k-fold cross-validation to estimate the skill of a method of unseen data like using a train-test split. It systematically creates and evaluates different subsets of the dataset. Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. Both train-test splits and k-fold cross validation are resampling methods. Since we are dealing to model the unknown, we need to use resampling method. In the case of applied machine learning, we are interested in estimating the skill of a machine learning procedure on unseen data. More specifically, the skill of the predictions made by a machine learning procedure.
+    
+    ```python
+    frame = cv2.imread("ethankid.jpg")
+    final = emotionScan(frame)
+
+    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+
+    # if image to small
+    recolor = cv2.cvtColor(final,cv2.COLOR_BGR2RGB)
+    img = Image.fromarray(recolor, 'RGB')
+    img = img.resize((300,500))
+    display(img)
+    ```
     ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
 8. Plotting Confusion Matrix
 
