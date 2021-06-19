@@ -1,7 +1,7 @@
 # BITI 1113 - Artificial Intelligence Project
 ## A. PROJECT SUMMARY
 
-Project Title: Human Emotion Recognition Using Keras
+Project Title: Human Emotion Recognition Using Keras :smile:
 
 Team Members:
 
