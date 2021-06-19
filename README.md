@@ -1,7 +1,7 @@
 # BITI 1113 - Artificial Intelligence Project
 ## A. PROJECT SUMMARY
 
-![Group Member](https://github.com/TanWeiYin/Group_J_AI_Project/tree/main/misc)
+![Group Member](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/GroupJ.jpg)
 
 Objectives:
 
