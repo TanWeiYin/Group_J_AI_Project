@@ -42,13 +42,21 @@ Download the dataset from [kaggle](https://www.kaggle.com/jonathanoheix/face-exp
 
 This repository is organized as:
 ```bash
-    ├── misc ( entries)                                     # Miscellaneous information
-    ├── haarcascade_frontalface_default.xml ( entries)      # To detect the face of individuals 
-    ├── HumanRecognitionTrainModel.ipynb ( entries)         # Training script 
-    ├── Main.ipynb ( entries)                               # Entry point of webcam live demo   
-    ├── Model.h5 ( entries)                                 # Load Keras Model
-    └── PlotConfussionMatrix.ipynb ( entries)               # Confusion matrix visualization
-    1 category, 5 files 
+    ├── misc (6 entries)                              # Miscellaneous information
+    │   ├── TestResult.jpg
+    │   ├── confusionmatrix.jpg
+    │   ├── dataset.jpg
+    │   ├── emotionimg.jpg
+    │   ├── livedemo.jpg
+    │   └── training_loss_accuracy.png  
+    ├── src (5 entries)
+    │   ├── haarcascade_frontalface_default.xml       # To detect the face of individuals
+    │   ├── HumanRecognitionTrainModel.ipynb          # Training script
+    │   ├── Main.ipynb                                # Entry point of webcam live demo
+    │   ├── Model.h5                                  # Load Keras Model
+    │   └── PlotConfussionMatrix.ipynb                # Confusion matrix visualization
+    └── README.md
+    2 categories, 12 files 
 ```
 
 ## E. TRAINING THE HUMAN EMOTION RECOGNITION
