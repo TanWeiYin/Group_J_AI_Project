@@ -43,8 +43,8 @@ Download the dataset from [kaggle](https://www.kaggle.com/jonathanoheix/face-exp
 This repository is organized as:
 ```bash
     ├── misc (7 entries)                              # Miscellaneous information
-    │   ├── TestResult.jpg
     │   ├── GroupJ_Slides.pdf
+    │   ├── TestResult.jpg
     │   ├── confusionmatrix.jpg
     │   ├── dataset.jpg
     │   ├── emotionimg.jpg
