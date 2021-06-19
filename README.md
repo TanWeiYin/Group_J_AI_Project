@@ -373,6 +373,30 @@ Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h
     img = img.resize((300,500))
     display(img)
     ```
+    ```python
+    frame = cv2.imread("pic2.jpg")
+    final = emotionScan(frame)
+
+    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+    ```
+    ```python
+    frame = cv2.imread("mahatir.jfif")
+    final = emotionScan(frame)
+
+    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+    ```
+    ```python
+    frame = cv2.imread("malaysian.jfif")
+    final = emotionScan(frame)
+
+    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+    ```
+    ```python
+    frame = cv2.imread("sad.jfif")
+    final = emotionScan(frame)
+
+    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+    ```
     ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
 8. Plotting Confusion Matrix
 
