@@ -369,3 +369,7 @@ Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to l
 
 ## G. PROJECT PRESENTATION
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
+
+## H. ACKNOWLEDGEMENT
+* [Emotion Detection CNN](https://github.com/akmadan/Emotion_Detection_CNN)
+* [README Template](https://github.com/osgoh88/Artificial-Intelligence-Project/)
