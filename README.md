@@ -42,8 +42,9 @@ Download the dataset from [kaggle](https://www.kaggle.com/jonathanoheix/face-exp
 
 This repository is organized as:
 ```bash
-    ├── misc (6 entries)                              # Miscellaneous information
+    ├── misc (7 entries)                              # Miscellaneous information
     │   ├── TestResult.jpg
+    │   ├── GroupJ_Slides.pdf
     │   ├── confusionmatrix.jpg
     │   ├── dataset.jpg
     │   ├── emotionimg.jpg
@@ -56,7 +57,7 @@ This repository is organized as:
     │   ├── Model.h5                                  # Load Keras Model
     │   └── PlotConfussionMatrix.ipynb                # Confusion matrix visualization
     └── README.md
-    2 categories, 12 files 
+    2 categories, 13 files 
 ```
 
 ## E. TRAINING THE HUMAN EMOTION RECOGNITION
