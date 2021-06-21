@@ -69,7 +69,7 @@ This repository is organized as:
    
 4. Set Training Callbacks list by defining Save Checkpoint, Early Stopping and Reduce Learning Rate
    
-  Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
+    Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
 
 5. Compile Model and Train Model
 ```bash
