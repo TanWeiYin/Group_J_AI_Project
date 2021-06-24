@@ -20,8 +20,10 @@ We are in the process of learning how to develop AI project using python. Our te
 ## C. DATASET
 The dataset used in the training of AI was created by Jonathan Oheix back in 2019 which is available on [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset).
 
-The original dataset consist of seven classes of images separated into two categories. 
+The original dataset consist of seven classes of images separated into two categories.
+
 ![OriDataset](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/OriDataset.jpg)
+
 We did not use the images of disgust as the number of image is disproportionaly small compare to the other classes and this might cause problem in training the AI. For the remaining classes, we've only used a subset of each classes so that the training and validation phase will not take too long.
 
 We adjust the number of images so that the number in each classes is about even and the ratio of training image to validation image is about 8:2.
@@ -49,7 +51,9 @@ This repository is organized as:
     └── README.md
     2 categories, 15 files 
 ```
+
 The misc directory contains the miscellaneous information of project Content (images,graphs,slides).
+
 The src directory contains the jupyter scripts as follows:
 - haarcascade_frontalface_default.xml : A typical face object detection library that will be used to detect the face of individuals.
 - HumanRecognitionTrainModel.ipynb : The execution of training process starts here and end with validation the effectiveness of AI.
@@ -61,7 +65,9 @@ The src directory contains the jupyter scripts as follows:
 1. Try reading and displaying image from dataset
     
     We will try to read and display some images from dataset for making sure that the dataset is working fine.
+    
 ![emotionimg](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/emotionimg.jpg)
+
 2. Training and validate data
 
     We will take the images from both train and validate sets and read the images. The images read will have it's size set to 48 x 48. Besides that, the color of the image will be set to greyscale as the image only colors that are shades of gray. Therefore, less information needs to be provided for each pixel. The batch size is also set to 32. This means that the training model will take 32 training example (files) in one iteration. The class mode is also set tp "categorical" as we have 6 emotions categorize in our datasets. In the training set, the data are shuffled as to prevent the deep learning model from learning the sequences of the data. This will allow the deep learning to be more dynamic and robust. The dataset was modified from the original dataset and split into a 8:2 ratio (80% training images and 20% test images).
@@ -359,6 +365,7 @@ Epoch 70/70
 Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h5
 ```
 After the training, the following classification report was generated.
+
 **Classification Report**
 |              | precision | recall | f1-score | support |
 |--------------|:---------:|:------:|:--------:|:-------:|
@@ -372,6 +379,7 @@ After the training, the following classification report was generated.
 | accuracy     |           |        |   0.76   |   3025  |
 | macro avg    |    0.76   |  0.76  |   0.75   |   3025  |
 | weighted avg |    0.76   |  0.76  |   0.75   |   3025  |
+
 Based on the classification record, it can be deduced that "surprise" performed well in every aspect for the model. For the "fear" and "sad" emotion, they usually predicted as correct and has low false positive percentage.
 
 6. Plotting Accuracy and Loss
