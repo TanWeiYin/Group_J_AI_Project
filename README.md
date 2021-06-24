@@ -27,7 +27,7 @@ The original dataset consist of seven classes of images separated into two categ
 We did not use the images of disgust as the number of image is disproportionaly small compare to the other classes and this might cause problem in training the AI. For the remaining classes, we've only used a subset of each classes so that the training and validation phase will not take too long.
 
 We adjust the number of images so that the number in each classes is about even and the ratio of training image to validation image is about 8:2.
-
+![SelectedDataset](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/SelectedDataset.jpg)
 ## D. PROJECT STRUCTURE
 
 This repository is organized as:
@@ -35,6 +35,8 @@ This repository is organized as:
     ├── misc (8 entries)                              # Miscellaneous information
     │   ├── GroupJ_Slides.pdf
     │   ├── Group_J.jpg
+    │   ├── OriDataSet.jpg
+    │   ├── SelectedDataSet.jpg
     │   ├── TestResult.jpg
     │   ├── confusionmatrix.jpg
     │   ├── dataset.jpg
