@@ -427,9 +427,12 @@ Based on the classification record, it can be deduced that "surprise" performed 
 
     plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
     ```
+    
     ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
+    
 8. Plotting Confusion Matrix
-We colored each square of confusion matrix with different shades based on accuracy, where a darker shade indicates a more accurate result.
+
+    We colored each square of confusion matrix with different shades based on accuracy, where a darker shade indicates a more accurate result.
 Happiness, Surprise, Neutral are the easiest to detect and show the most accurate results. On the contrary, Sad, Anger, and Fear are the most struggling for AI.
 
    ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg) 
@@ -443,10 +446,18 @@ Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to l
 ## G. DEMO VIDEO
 Present by @TanWeiYin
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
+The installation and setup process are as follows:
+1. Download all src files from GitHub.
+2. Click run to execute the main.ipynb script.
+3. Place your face in front of the webcam.
+4. The facial emotion recognizer is ready to use.
 
 ## H. ACKNOWLEDGEMENT
 * [Emotion Detection CNN](https://github.com/akmadan/Emotion_Detection_CNN)
-    
+    Main reference of application of source code
 * [README Template](https://github.com/osgoh88/Artificial-Intelligence-Project/)
+    A project template that designed by our lecturer
 * [The 4 Convolutional Neural Network Models That Can Classify Your Fashion Images](https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-can-classify-your-fashion-images-9fe7f3e5399d#:~:text=Convolutional%20Neural%20Networks%20(CNNs)%20is,an%20image%20is%20good%20enough)
+    Understanding how CNN model works
 * [Face Expression Detection](https://colab.research.google.com/drive/1DOvXJZRkjfKfF9oUpCZXSU3hPG3g1h-l?usp=sharing)
+    Learn how to configure and detect emotions of the static image.
