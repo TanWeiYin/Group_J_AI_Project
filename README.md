@@ -15,13 +15,16 @@ AI is the ability of machines to mimic human capabilities in a way that we would
 Machine learning is an application of AI. With machine learning, we give the machine lots of examples of data, demonstrating what we would like it to do so that it can figure out how to achieve a goal on its own. The machine learns and adapts its strategy to achieve the goal.
 In our project, we are feeding the machine images of our facial expressions via the inbuilt camera. The more varied the data we provide, the more likely the AI will correctly classify the input as the appropriate emotion. In machine learning, the system will give a confidence value; in this case, a percentage and the bar filled or partially filled, represented by colour. The confidence value provides us with an indication of how sure the AI is of its classification.
 This project focuses on the concept of classification. Classification is a learning technique used to group data based on attributes or features.
-We are in the process of learning how to develop AI project using python. Our team has chose to develop this AI technique as we fervently hope that it can be applied in robot caretaker especially look after children having emotion disorder. Our facial emotion recognition algorithm can identify six different type of emotional states in real-time: happiness, sadness, surprise, anger, and fear. The robot can give appropriate response after detecting the child's emotion. Besides, this algorithm can be applied in AI customer service. Live video care line session is more accurate than traditional audio assistance care line. We have used 4-Conv Layered CNN Model as our facial emotion recognition technique.
+We are in the process of learning how to develop AI project using python. Our team has chose to develop this AI technique as we fervently hope that it can be applied in robot caretaker especially look after children having emotion disorder. Our facial emotion recognition algorithm can identify six different type of emotional states in real-time: happiness, sadness, surprise, anger, neutral and fear. The robot can give appropriate response after detecting the child's emotion. Besides, this algorithm can be applied in AI customer service. Live video care line session is more accurate than traditional audio assistance care line. We have used 4-Conv Layered CNN Model as our facial emotion recognition technique.
 
 ## C. DATASET
-The dataset from [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset) is used for training the AI.
+The dataset used in the training of AI was created by Jonathan Oheix back in 2019 which is available on [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset).
 
-The original dataset consist of seven classes of images as follows: Angry, Fear, Happy, Neutral, Sad, Surprise and disgust. We unselect the disgust emotion as the number of  will causing imbalance support 
+The original dataset consist of seven classes of images separated into two categories. 
+![OriDataset](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/OriDataset.jpg)
+We did not use the images of disgust as the number of image is disproportionaly small compare to the other classes and this might cause problem in training the AI. For the remaining classes, we've only used a subset of each classes so that the training and validation phase will not take too long.
 
+We adjust the number of images so that the number in each classes is about even and the ratio of training image to validation image is about 8:2.
 
 ## D. PROJECT STRUCTURE
 
@@ -46,10 +49,18 @@ This repository is organized as:
     └── README.md
     2 categories, 15 files 
 ```
+The misc directory contains the miscellaneous information of project Content (images,graphs,slides).
+The src directory contains the jupyter scripts as follows:
+- haarcascade_frontalface_default.xml : A typical face object detection library that will be used to detect the face of individuals.
+- HumanRecognitionTrainModel.ipynb : The execution of training process starts here and end with validation the effectiveness of AI.
+- Main.ipynb : It works as the entry point of webcam live demo.
+- PlotConfussionMatrix.ipynb : We can take a look on Confusion Matrix and Classification Report from here.
 
 ## E. TRAINING THE HUMAN EMOTION RECOGNITION
 
 1. Try reading and displaying image from dataset
+    
+    We will try to read and display some images from dataset for making sure that the dataset is working fine.
 ![emotionimg](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/emotionimg.jpg)
 2. Training and validate data
 
@@ -64,6 +75,7 @@ This repository is organized as:
     Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
 
 5. Compile Model and Train Model
+    Here we can compile the model and begin the training of the AI. The training is split into 70 epoch such that every image will be included in the training once for each epoch. Each epoch is further split into many steps where each steps consist of the training using 32 images.
 ```bash
     Epoch 1/70
 564/564 [==============================] - 79s 139ms/step - loss: 2.5027 - acc: 0.2365 - val_loss: 1.7213 - val_acc: 0.3208
@@ -346,6 +358,7 @@ Epoch 70/70
 
 Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h5
 ```
+After the training, the following classification report was generated.
 **Classification Report**
 |              | precision | recall | f1-score | support |
 |--------------|:---------:|:------:|:--------:|:-------:|
@@ -359,6 +372,7 @@ Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h
 | accuracy     |           |        |   0.76   |   3025  |
 | macro avg    |    0.76   |  0.76  |   0.75   |   3025  |
 | weighted avg |    0.76   |  0.76  |   0.75   |   3025  |
+Based on the classification record, it can be deduced that "surprise" performed well in every aspect for the model. For the "fear" and "sad" emotion, they usually predicted as correct and has low false positive percentage.
 
 6. Plotting Accuracy and Loss
    ![Training_Loss_Accuracy](https://github.com/Josie528/BITI1113-A.I.-Project/blob/main/misc/training_loss_accuracy.png)
@@ -366,6 +380,8 @@ Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h
 7. Define function and Test the Trained Model
 
     We use k-fold cross-validation to estimate the skill of a method of unseen data like using a train-test split. It systematically creates and evaluates different subsets of the dataset. Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. Both train-test splits and k-fold cross validation are resampling methods. Since we are dealing to model the unknown, we need to use resampling method. In the case of applied machine learning, we are interested in estimating the skill of a machine learning procedure on unseen data. More specifically, the skill of the predictions made by a machine learning procedure.
+    
+    We will also use some static images to test the trained model. The example shown here are consisting different image orientation, different size and different number of people. It showed that the trained model has somewhat successfully passed the testing stage.
     
     ```python
     frame = cv2.imread("ethankid.jpg")
@@ -405,6 +421,8 @@ Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h
     ```
     ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
 8. Plotting Confusion Matrix
+We colored each square of confusion matrix with different shades based on accuracy, where a darker shade indicates a more accurate result.
+Happiness, Surprise, Neutral are the easiest to detect and show the most accurate results. On the contrary, Sad, Anger, and Fear are the most struggling for AI.
 
    ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg) 
 ## F. RESULT AND CONCLUSION
@@ -420,6 +438,7 @@ Present by @TanWeiYin
 
 ## H. ACKNOWLEDGEMENT
 * [Emotion Detection CNN](https://github.com/akmadan/Emotion_Detection_CNN)
+    
 * [README Template](https://github.com/osgoh88/Artificial-Intelligence-Project/)
 * [The 4 Convolutional Neural Network Models That Can Classify Your Fashion Images](https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-can-classify-your-fashion-images-9fe7f3e5399d#:~:text=Convolutional%20Neural%20Networks%20(CNNs)%20is,an%20image%20is%20good%20enough)
 * [Face Expression Detection](https://colab.research.google.com/drive/1DOvXJZRkjfKfF9oUpCZXSU3hPG3g1h-l?usp=sharing)
