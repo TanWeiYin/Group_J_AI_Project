@@ -6,6 +6,8 @@
 **Objectives**
 
 - To classify each face based on the emotion shown in the facial expression into one of six categories (Angry, Fear, Happy, Neutral, Sad, Surprise).
+- To help people to see their present mental condition.
+- To develop an algorithm that can detect facial expression in static image and live video.
 
 ## B. ABSTRACT
 
