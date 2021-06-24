@@ -18,21 +18,11 @@ This project focuses on the concept of classification. Classification is a learn
 We are in the process of learning how to develop AI project using python. Our team has chose to develop this AI technique as we fervently hope that it can be applied in robot caretaker especially look after children having emotion disorder. Our facial emotion recognition algorithm can identify six different type of emotional states in real-time: happiness, sadness, surprise, anger, and fear. The robot can give appropriate response after detecting the child's emotion. Besides, this algorithm can be applied in AI customer service. Live video care line session is more accurate than traditional audio assistance care line. We have used 4-Conv Layered CNN Model as our facial emotion recognition technique.
 
 ## C. DATASET
-Download the dataset from [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset)
+The dataset from [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset) is used for training the AI.
 
-**Classification Report**
-|              | precision | recall | f1-score | support |
-|--------------|:---------:|:------:|:--------:|:-------:|
-| angry        |    0.69   |  0.75  |   0.72   |   501   |
-| fear         |    0.78   |  0.64  |   0.70   |   505   |
-| happy        |    0.81   |  0.84  |   0.83   |   504   |
-| neutral      |    0.71   |  0.79  |   0.74   |   504   |
-| sad          |    0.74   |  0.59  |   0.66   |   509   |
-| surprise     |    0.81   |  0.94  |   0.87   |   502   |
-|              |           |        |          |         |
-| accuracy     |           |        |   0.76   |   3025  |
-| macro avg    |    0.76   |  0.76  |   0.75   |   3025  |
-| weighted avg |    0.76   |  0.76  |   0.75   |   3025  |
+The original dataset consist of seven classes of images as follows: Angry, Fear, Happy, Neutral, Sad, Surprise and disgust. We unselect the disgust emotion as the number of  will causing imbalance support 
+
+
 ## D. PROJECT STRUCTURE
 
 This repository is organized as:
@@ -356,6 +346,20 @@ Epoch 70/70
 
 Epoch 00070: val_acc improved from 0.75632 to 0.75665, saving model to .\model.h5
 ```
+**Classification Report**
+|              | precision | recall | f1-score | support |
+|--------------|:---------:|:------:|:--------:|:-------:|
+| angry        |    0.69   |  0.75  |   0.72   |   501   |
+| fear         |    0.78   |  0.64  |   0.70   |   505   |
+| happy        |    0.81   |  0.84  |   0.83   |   504   |
+| neutral      |    0.71   |  0.79  |   0.74   |   504   |
+| sad          |    0.74   |  0.59  |   0.66   |   509   |
+| surprise     |    0.81   |  0.94  |   0.87   |   502   |
+|              |           |        |          |         |
+| accuracy     |           |        |   0.76   |   3025  |
+| macro avg    |    0.76   |  0.76  |   0.75   |   3025  |
+| weighted avg |    0.76   |  0.76  |   0.75   |   3025  |
+
 6. Plotting Accuracy and Loss
    ![Training_Loss_Accuracy](https://github.com/Josie528/BITI1113-A.I.-Project/blob/main/misc/training_loss_accuracy.png)
    The gap between the two plotted line is small so, it has little overfitting. 
