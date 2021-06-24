@@ -384,7 +384,7 @@ After the training, the following classification report was generated.
 | macro avg    |    0.76   |  0.76  |   0.75   |   3025  |
 | weighted avg |    0.76   |  0.76  |   0.75   |   3025  |
 
-Based on the classification record, it can be deduced that "surprise" performed well in every aspect for the model. For the "fear" and "sad" emotion, they usually predicted as correct and has low false positive percentage.
+Based on the classification record, it can be deduced that "surprise" performed well in every aspect for the model. For the "fear" and "sad" emotion, they usually correctly predicted yet they have relatively high false positive percentage.
 
 6. Plotting Accuracy and Loss
    ![Training_Loss_Accuracy](https://github.com/Josie528/BITI1113-A.I.-Project/blob/main/misc/training_loss_accuracy.png)
@@ -439,7 +439,8 @@ Based on the classification record, it can be deduced that "surprise" performed 
     We colored each square of confusion matrix with different shades based on accuracy, where a darker shade indicates a more accurate result.
 Happiness, Surprise, Neutral are the easiest to detect and show the most accurate results. On the contrary, Sad, Anger, and Fear are the most struggling for AI.
 
-   ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg) 
+   ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg)
+   
 ## F. RESULT AND CONCLUSION
 The AI recognizes emotion model can get around 75% accuracy. There is still room for improving accuracy and efficiency. We hope that we are able to train the model from scratch by collecting more comprehensive dataset in future. 
 
@@ -447,8 +448,9 @@ Sometimes we hide our emotions. What others see on our outside is not always how
 
 Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to learn how to implement a real-world AI project using Python.
 
-## G. DEMO VIDEO
-Present by @TanWeiYin
+## G. Project Presentation
+Demo Video: Wei Yin
+Making Slides: Mirza, Afiqah, Jia Mei
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
 The installation and setup process are as follows:
 1. Download all src files from GitHub.
