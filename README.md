@@ -18,6 +18,10 @@ This project focuses on the concept of classification. Classification is a learn
 We are in the process of learning how to develop AI project using python. Our team has chose to develop this AI technique as we fervently hope that it can be applied in robot caretaker especially look after children having emotion disorder. Our facial emotion recognition algorithm can identify six different type of emotional states in real-time: happiness, sadness, surprise, anger, neutral and fear. The robot can give appropriate response after detecting the child's emotion. Besides, this algorithm can be applied in AI customer service. Live video care line session is more accurate than traditional audio assistance care line. We have used 4-Conv Layered CNN Model as our facial emotion recognition technique.
 
 ## C. DATASET
+
+- Project Phase
+    [ProjectPhase](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPhase.jpg)
+
 The dataset used in the training of AI was created by Jonathan Oheix back in 2019 which is available on [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset).
 
 The original dataset consist of seven classes of images separated into two categories.
