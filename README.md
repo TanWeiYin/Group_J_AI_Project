@@ -20,7 +20,7 @@ We are in the process of learning how to develop AI project using python. Our te
 ## C. DATASET
 
 - Project Phase
-    [ProjectPhase](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPhase.jpg)
+    ![ProjectPhase](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPhase.jpg)
 
 The dataset used in the training of AI was created by Jonathan Oheix back in 2019 which is available on [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset).
 
