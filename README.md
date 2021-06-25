@@ -449,8 +449,10 @@ Sometimes we hide our emotions. What others see on our outside is not always how
 Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to learn how to implement a real-world AI project using Python.
 
 ## G. Project Presentation
-Demo Video: Wei Yin
-Making Slides: Mirza, Afiqah, Jia Mei
+Demo Video: [@TanWeiYin](https://github.com/TanWeiYin/)
+
+Making Slides: [@IamMSA-01](https://github.com/IamMSA-01), Afiqah, [@Josie528](https://github.com/Josie528)
+
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
 The installation and setup process are as follows:
 1. Download all src files from GitHub.
