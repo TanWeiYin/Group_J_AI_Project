@@ -414,47 +414,46 @@ Figure 3 : Training Loss/Accuracy vs. Validation Loss/Accuracy
     
    We will also use some static images to test the trained model. The example shown here are consisting different image orientation, different size and different number of people. It showed that the trained model has somewhat successfully passed the testing stage.
     
+   ```python
+   frame = cv2.imread("ethankid.jpg")
+   final = emotionScan(frame)
+
+   plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+
+   # if image to small
+   recolor = cv2.cvtColor(final,cv2.COLOR_BGR2RGB)
+   img = Image.fromarray(recolor, 'RGB')
+   img = img.resize((300,500))
+   display(img)
+   ```
+   
+   ```python
+   frame = cv2.imread("pic2.jpg")
+   final = emotionScan(frame)
+
+   plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+   ```
     
-      ~~~python
-      frame = cv2.imread("ethankid.jpg")
-      final = emotionScan(frame)
+   ```python
+   frame = cv2.imread("mahatir.jfif")
+   final = emotionScan(frame)
 
-      plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
-
-      # if image to small
-      recolor = cv2.cvtColor(final,cv2.COLOR_BGR2RGB)
-      img = Image.fromarray(recolor, 'RGB')
-      img = img.resize((300,500))
-      display(img)
-      ~~~
+   plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+   ```
     
-    ```python
-    frame = cv2.imread("pic2.jpg")
-    final = emotionScan(frame)
+   ```python
+   frame = cv2.imread("malaysian.jfif")
+   final = emotionScan(frame)
 
-    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
-    ```
+   plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+   ```
     
-    ```python
-    frame = cv2.imread("mahatir.jfif")
-    final = emotionScan(frame)
+   ```python
+   frame = cv2.imread("sad.jfif")
+   final = emotionScan(frame)
 
-    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
-    ```
-    
-    ```python
-    frame = cv2.imread("malaysian.jfif")
-    final = emotionScan(frame)
-
-    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
-    ```
-    
-      ```python
-      frame = cv2.imread("sad.jfif")
-      final = emotionScan(frame)
-
-      plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
-      ```
+   plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+   ```
     
    ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
     
