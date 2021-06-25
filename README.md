@@ -1,7 +1,10 @@
 # BITI 1113 - Artificial Intelligence Project
 ## A. PROJECT SUMMARY
 
-![Group Member](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/Group_J.jpg)
+![GroupMember](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/Group_J.jpg)
+<p align="center">
+Figure 1 : Group Members' Profile
+</p>
 
 **Objectives**
 
@@ -78,8 +81,11 @@ The src directory contains the jupyter scripts as follows:
 #### *`1. Try reading and displaying image from dataset`*
     
    We will try to read and display some images from dataset for making sure that the dataset is working fine.
-    
-![emotionimg](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/emotionimg.jpg)
+ 
+![Explore Dataset](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/emotionimg.jpg)
+<p align="center">
+Figure 2 : Explore Dataset
+</p>
 
 #### *`2. Training and validate data`*
 
@@ -397,6 +403,9 @@ Based on the classification record, it can be deduced that "surprise" performed 
 
 #### *`6. Plotting Accuracy and Loss`*
    ![Training_Loss_Accuracy](https://github.com/Josie528/BITI1113-A.I.-Project/blob/main/misc/training_loss_accuracy.png)
+<p align="center">
+Figure 3 : Training Loss/Accuracy vs. Validation Loss/Accuracy
+</p>
    The gap between the two plotted line is small so, it has little overfitting. 
    
 #### *`7. Define function and Test the Trained Model`*
