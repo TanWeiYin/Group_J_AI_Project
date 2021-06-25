@@ -415,18 +415,18 @@ Figure 3 : Training Loss/Accuracy vs. Validation Loss/Accuracy
    We will also use some static images to test the trained model. The example shown here are consisting different image orientation, different size and different number of people. It showed that the trained model has somewhat successfully passed the testing stage.
     
     
-    ```python
-    frame = cv2.imread("ethankid.jpg")
-    final = emotionScan(frame)
+      ~~~python
+      frame = cv2.imread("ethankid.jpg")
+      final = emotionScan(frame)
 
-    plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
+      plt.imshow(cv2.cvtColor(final,cv2.COLOR_BGR2RGB))
 
-    # if image to small
-    recolor = cv2.cvtColor(final,cv2.COLOR_BGR2RGB)
-    img = Image.fromarray(recolor, 'RGB')
-    img = img.resize((300,500))
-    display(img)
-    ```
+      # if image to small
+      recolor = cv2.cvtColor(final,cv2.COLOR_BGR2RGB)
+      img = Image.fromarray(recolor, 'RGB')
+      img = img.resize((300,500))
+      display(img)
+      ~~~
     
     ```python
     frame = cv2.imread("pic2.jpg")
