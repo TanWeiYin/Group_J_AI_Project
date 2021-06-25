@@ -453,7 +453,7 @@ Demo Video: [@TanWeiYin](https://github.com/TanWeiYin/)
 
 Voice Over: [@Josie528](https://github.com/Josie528)
 
-Making Slides: [@IamMSA-01](https://github.com/IamMSA-01), Afiqah, [@Josie528](https://github.com/Josie528)
+Making Slides: [@IamMSA-01](https://github.com/IamMSA-01), [@NurAfiqahRaman](https://github.com/NurAfiqahRaman), [@Josie528](https://github.com/Josie528)
 
 [![livedemo](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPresentation.jpg)](https://youtu.be/UgMNSuaAdL4)
 The installation and setup process are as follows:
