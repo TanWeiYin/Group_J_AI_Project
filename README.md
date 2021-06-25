@@ -451,6 +451,8 @@ Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to l
 ## G. Project Presentation
 Demo Video: [@TanWeiYin](https://github.com/TanWeiYin/)
 
+Voice Over: [@Josie528](https://github.com/Josie528)
+
 Making Slides: [@IamMSA-01](https://github.com/IamMSA-01), Afiqah, [@Josie528](https://github.com/Josie528)
 
 [![livedemo](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/livedemo.jpg)](https://www.youtube.com/watch?v=bdczQRzMWr0 "livedemo")
