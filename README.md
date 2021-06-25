@@ -19,8 +19,9 @@ We are in the process of learning how to develop AI project using python. Our te
 
 ## C. DATASET
 
-- Project Phase
-    ![ProjectPhase](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPhase.jpg)
+#### *`Project Phase`*
+
+   ![ProjectPhase](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPhase.jpg)
 
 The dataset used in the training of AI was created by Jonathan Oheix back in 2019 which is available on [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset).
 
@@ -70,26 +71,26 @@ The src directory contains the jupyter scripts as follows:
 
 ## E. TRAINING THE HUMAN EMOTION RECOGNITION
 
-1. Try reading and displaying image from dataset
+#### *`1. Try reading and displaying image from dataset`*
     
-    We will try to read and display some images from dataset for making sure that the dataset is working fine.
+   We will try to read and display some images from dataset for making sure that the dataset is working fine.
     
 ![emotionimg](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/emotionimg.jpg)
 
-2. Training and validate data
+#### *`2. Training and validate data`*
 
-    We will take the images from both train and validate sets and read the images. The images read will have it's size set to 48 x 48. Besides that, the color of the image will be set to greyscale as the image only colors that are shades of gray. Therefore, less information needs to be provided for each pixel. The batch size is also set to 32. This means that the training model will take 32 training example (files) in one iteration. The class mode is also set tp "categorical" as we have 6 emotions categorize in our datasets. In the training set, the data are shuffled as to prevent the deep learning model from learning the sequences of the data. This will allow the deep learning to be more dynamic and robust. The dataset was modified from the original dataset and split into a 8:2 ratio (80% training images and 20% test images).
+   We will take the images from both train and validate sets and read the images. The images read will have it's size set to 48 x 48. Besides that, the color of the image will be set to greyscale as the image only colors that are shades of gray. Therefore, less information needs to be provided for each pixel. The batch size is also set to 32. This means that the training model will take 32 training example (files) in one iteration. The class mode is also set tp "categorical" as we have 6 emotions categorize in our datasets. In the training set, the data are shuffled as to prevent the deep learning model from learning the sequences of the data. This will allow the deep learning to be more dynamic and robust. The dataset was modified from the original dataset and split into a 8:2 ratio (80% training images and 20% test images).
 
-3. Building 4-Conv Layered CNN Model
+#### *`3. Building 4-Conv Layered CNN Model`*
    
    The practical benefit of using CNN with 4 convolutional layer is that having fewer parameters greatly improves the time it takes to learn as well as reduces the amount of data required to train the model. The beauty of the CNN is that the number of parameters is independent of the size of the original image. We can run the same CNN on a 300 × 300 image, and the number of parameters won’t change in the convolution layer. The sliding-window shenanigans happen in the convolution layer of the neural network. A typical CNN has multiple convolution layers.
    
-4. Set Training Callbacks list by defining Save Checkpoint, Early Stopping and Reduce Learning Rate
+#### *`4. Set Training Callbacks list by defining Save Checkpoint, Early Stopping and Reduce Learning Rate`*
    
-    Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
+   Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
 
-5. Compile Model and Train Model
-    Here we can compile the model and begin the training of the AI. The training is split into 70 epoch such that every image will be included in the training once for each epoch. Each epoch is further split into many steps where each steps consist of the training using 32 images.
+#### *`5. Compile Model and Train Model`*
+   Here we can compile the model and begin the training of the AI. The training is split into 70 epoch such that every image will be included in the training once for each epoch. Each epoch is further split into many steps where each steps consist of the training using 32 images.
 ```bash
     Epoch 1/70
 564/564 [==============================] - 79s 139ms/step - loss: 2.5027 - acc: 0.2365 - val_loss: 1.7213 - val_acc: 0.3208
@@ -390,14 +391,15 @@ After the training, the following classification report was generated.
 
 Based on the classification record, it can be deduced that "surprise" performed well in every aspect for the model. For the "fear" and "sad" emotion, they usually correctly predicted yet they have relatively high false positive percentage.
 
-6. Plotting Accuracy and Loss
+#### *`6. Plotting Accuracy and Loss`*
    ![Training_Loss_Accuracy](https://github.com/Josie528/BITI1113-A.I.-Project/blob/main/misc/training_loss_accuracy.png)
    The gap between the two plotted line is small so, it has little overfitting. 
-7. Define function and Test the Trained Model
+   
+#### *`7. Define function and Test the Trained Model`*
 
-    We use k-fold cross-validation to estimate the skill of a method of unseen data like using a train-test split. It systematically creates and evaluates different subsets of the dataset. Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. Both train-test splits and k-fold cross validation are resampling methods. Since we are dealing to model the unknown, we need to use resampling method. In the case of applied machine learning, we are interested in estimating the skill of a machine learning procedure on unseen data. More specifically, the skill of the predictions made by a machine learning procedure.
+   We use k-fold cross-validation to estimate the skill of a method of unseen data like using a train-test split. It systematically creates and evaluates different subsets of the dataset. Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. Both train-test splits and k-fold cross validation are resampling methods. Since we are dealing to model the unknown, we need to use resampling method. In the case of applied machine learning, we are interested in estimating the skill of a machine learning procedure on unseen data. More specifically, the skill of the predictions made by a machine learning procedure.
     
-    We will also use some static images to test the trained model. The example shown here are consisting different image orientation, different size and different number of people. It showed that the trained model has somewhat successfully passed the testing stage.
+   We will also use some static images to test the trained model. The example shown here are consisting different image orientation, different size and different number of people. It showed that the trained model has somewhat successfully passed the testing stage.
     
     ```python
     frame = cv2.imread("ethankid.jpg")
@@ -438,9 +440,9 @@ Based on the classification record, it can be deduced that "surprise" performed 
     
     ![Test Result](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/TestResult.jpg)
     
-8. Plotting Confusion Matrix
+#### *`8. Plotting Confusion Matrix`*
 
-    We colored each square of confusion matrix with different shades based on accuracy, where a darker shade indicates a more accurate result.
+   We colored each square of confusion matrix with different shades based on accuracy, where a darker shade indicates a more accurate result.
 Happiness, Surprise, Neutral are the easiest to detect and show the most accurate results. On the contrary, Sad, Anger, and Fear are the most struggling for AI.
 
    ![ConfusionMatrix](https://github.com/Josie528/BITI-1113-AI-Project/blob/main/misc/confusionmatrix.jpg)
