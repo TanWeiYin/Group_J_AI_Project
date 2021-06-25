@@ -23,11 +23,15 @@ We are in the process of learning how to develop AI project using python. Our te
 
    ![ProjectPhase](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/ProjectPhase.jpg)
 
+#### *`Original Dataset`*
+
 The dataset used in the training of AI was created by Jonathan Oheix back in 2019 which is available on [kaggle](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset).
 
 The original dataset consist of seven classes of images separated into two categories.
 
 ![OriDataset](https://github.com/TanWeiYin/Group_J_AI_Project/blob/main/misc/OriDataset.jpg)
+
+#### *`Selected Dataset`*
 
 We did not use the images of disgust as the number of image is disproportionaly small compare to the other classes and this might cause problem in training the AI. For the remaining classes, we've only used a subset of each classes so that the training and validation phase will not take too long.
 
