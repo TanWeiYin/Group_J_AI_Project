@@ -94,7 +94,60 @@ Figure 2 : Explore Dataset
 #### *`3. Building 4-Conv Layered CNN Model`*
    
    The practical benefit of using CNN with 4 convolutional layer is that having fewer parameters greatly improves the time it takes to learn as well as reduces the amount of data required to train the model. The beauty of the CNN is that the number of parameters is independent of the size of the original image. We can run the same CNN on a 300 × 300 image, and the number of parameters won’t change in the convolution layer. The sliding-window shenanigans happen in the convolution layer of the neural network. A typical CNN has multiple convolution layers.
-   
+
+```bash
+   Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 46, 46, 32)        320       
+_________________________________________________________________
+batch_normalization (BatchNo (None, 46, 46, 32)        128       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 44, 44, 32)        9248      
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 44, 44, 32)        128       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 22, 22, 32)        0         
+_________________________________________________________________
+dropout (Dropout)            (None, 22, 22, 32)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 20, 20, 64)        18496     
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 20, 20, 64)        256       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 20, 20, 64)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 18, 18, 128)       73856     
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 18, 18, 128)       512       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 9, 9, 128)         0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 9, 9, 128)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 10368)             0         
+_________________________________________________________________
+dense (Dense)                (None, 512)               5308928   
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 512)               2048      
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 512)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               65664     
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 128)               512       
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 6)                 774       
+=================================================================
+Total params: 5,480,870
+Trainable params: 5,479,078
+Non-trainable params: 1,792
+_________________________________________________________________
+```
+
 #### *`4. Set Training Callbacks list by defining Save Checkpoint, Early Stopping and Reduce Learning Rate`*
    
    Callbacks provide a way to execute code and interact with the training model process automatically. We used custom callback so that it can be used to dynamically change the learning rate of the optimizer during the course of training. Callback called EarlyStopping is used to specify the performance measure to monitor and trigger. It will stop the training process when it has been triggered but the model at the end of training may not be the best model with good performance on the validation dataset. ModelCheckPoint callback is required in order to save the best model observed during training for future use.
